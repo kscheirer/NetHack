@@ -80,9 +80,17 @@ static NEARDATA struct artifact artilist[] = {
      *      damage bonus applies to all targets rather than just elves
      *      (handled as special case in spec_dbon()).
      */
-    A("Grimtooth", ORCISH_DAGGER, (SPFX_RESTR | SPFX_WARN | SPFX_DFLAG2),
+    A("Grimtooth", ORCISH_DAGGER, (SPFX_WARN | SPFX_DFLAG2),
       0, M2_ELF, PHYS(2, 6), NO_DFNS,
       NO_CARY, 0, A_CHAOTIC, NON_PM, PM_ORC, 300L, CLR_RED),
+    
+    /*
+     * From https://github.com/mistydemeo/slashem/blob/master/include/artilist.h
+     */
+    A("Elfrist", ORCISH_SPEAR, (SPFX_WARN | SPFX_DFLAG2), 
+      0, M2_ELF, PHYS(5,15), NO_DFNS, 
+      NO_CARY, 0, A_CHAOTIC, PM_HUMAN_WEREWOLF, PM_ORC, 300L ),
+     
     /*
      *      Orcrist and Sting have same alignment as elves.
      *
